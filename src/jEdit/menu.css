@@ -1,0 +1,58 @@
+﻿body {
+}
+
+.tu-btn {
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 22px;
+    background: #e67f10;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.tu-btn:hover {
+  background: #fc533c;
+  text-decoration: none;
+}
+#survey-menu {
+    width: 25%;
+    float: right;
+    padding-top: 5px;
+}
+
+.option-element{
+    margin-left:20px;
+}
+.t-span-5 {
+    display: inline-block;
+    width: 25px;
+}
+.btn-name {
+   
+
+    
+}
+@media screen and (max-width: 1000px) {
+    .btn-name {
+        display: none;
+    }
+    #survey-menu{
+        width: 7%;
+        min-width: 100px;
+    }
+    .question-mask{
+        padding-left: 20px;
+    }
+}
+
+.question-mask .t-span-5 img{
+    width: 15px;
+    height: 15px;
+}
+.question-mask div{
+    margin-right: 10px;
+}

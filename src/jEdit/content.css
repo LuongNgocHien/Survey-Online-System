@@ -1,0 +1,345 @@
+.survey-area {
+    width: 73%;
+    background-color: #f5f5f591;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 20px 20px 20px 20px;
+    min-width: 500px;
+}
+.question-block {
+    width: 100%;
+    margin: 10px 10px 10px 10px;
+    min-height: 50px;
+}
+.chart {
+    display: block;
+    width: 100%;
+}
+.survey-header-bar {
+    background-color: #4caf50;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.survey-header-bar span{
+    color: white;
+}
+.question-content {
+    background-color: white;
+    margin: 10px 20px 10px 10px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+}
+.question-mask{
+    display: block;
+}
+.q-choice{
+    display:block;
+    margin-left: 10px;
+}
+.q-btns{
+    float: right;
+}
+.edit-block input{
+    display: inline-block;
+}
+
+.page-button{
+    float: right;
+    display: inline-block;
+}
+.page-area {
+    background-color: #337ab726;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.page-bar {
+    background-color: #63d063a3;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.edit {
+    padding-top: 20px;
+
+}
+.q-title-edit {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.edit-block {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin-top: 2px;
+}
+
+.textbox-edit {
+    border: 0;
+    background: transparent;
+    border-bottom: 1px dashed;
+    width: 100%;
+}
+    .textbox-edit:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+.moreoption-bar{
+    padding: 3px;
+    background-color: purple;
+}
+.remove-button{
+    border-radius: 100%;
+}
+.number-edit {
+    width: 60px;
+    font-size: 11px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px dashed #808080;
+}
+    .number-edit:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+.opttion-row{
+    padding-bottom: 5px;
+}
+.tab-button{
+    display: inline-block;
+}
+h2 {
+    color: #4caf50;
+}
+.page-title span {
+    color: #330b0b;
+}
+.question-mask span {
+    color: #4caf50;
+}
+.q-choices-edit div {
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.q-required-content-edit div{
+    margin-top: 10px;
+}
+.mustandnotlist{
+    display: inline-block;
+}
+.survey-title span {
+    font-size: 30px;
+}
+.page-title input {
+    width: 350px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px dashed #808080;
+}
+    .page-title input:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+.page-info {
+    display: inline-block;
+}
+.t-span-5{
+    display: inline-block;
+    width: 25px;
+}
+.t-span-10 {
+    display: inline-block;
+    width: 50px;
+}
+.t-span-15 {
+    display: inline-block;
+    width: 75px;
+}
+.t-span-20 {
+    display: inline-block;
+    width: 100px;
+}
+.t-span-25 {
+    display: inline-block;
+    width: 125px;
+}
+.page-description{
+    padding-top: 5px;
+}
+    .page-description input {
+        width: 350px;
+        border: 0;
+        background: transparent;
+        border-bottom: 1px dashed #808080;
+    }
+
+    .page-description input:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+.q-shortdescription h4 {
+    color: #4caf50;
+    font-size: 15px;
+}
+.q-shortdescription{
+    padding-bottom: 5px;
+}
+
+.inline-option{
+    display: inline-block;
+}
+.edit-label{
+    font-size: 11px;
+}
+.inline-option span{
+    padding-right: 20px;
+    display: inline-block;
+    font-size: 11px;
+}
+.option .inline-option{
+    float: right;
+}
+.option{
+    display: block;
+    height: 105px;
+}
+
+.q-required-content-edit select {
+    border: 0;
+    border-bottom: 1px dashed black;
+}
+    .q-required-content-edit select:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+.q-required-content-edit .inline-option input {
+    margin-right: 20px;
+}
+.q-required-content-edit .inline-option span {
+    padding-right: 0px;
+}
+.q-required-content-edit .inline-option select {
+    width: 100%;
+}
+
+.full{
+    width: 100%;
+}
+.q-required-content-edit .inline-option{
+    float: left;
+}
+
+.q-required-content-edit .full {
+    float: initial;
+}
+    .q-required-content-edit .opttion-row input {
+        border: 0;
+        border-bottom: 1px dashed black;
+    }
+        .q-required-content-edit input:focus {
+            outline: 0;
+            text-decoration: none;
+            font-style: italic;
+        }
+    .q-required-content-edit .opttion-row .remove-button {
+        border: 0;
+        margin-right: 3px;
+    }
+
+.date-edit {
+    border: 0;
+    border-bottom: 1px dashed black;
+    font-size: 11px;
+}
+    .date-edit:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+
+.q-column-edit .opttion-row input{
+    border: 0;
+    margin-left: 20px;
+    border-bottom: 1px dashed black;
+}
+    .q-column-edit .opttion-row input:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+.q-column-edit .opttion-row .remove-button{
+    border: 0;
+    margin-left: 5px;
+}
+.q-column-edit .inline-option{
+    padding-left: 10px;
+}
+
+
+
+.q-row-edit .opttion-row input {
+    border: 0;
+    margin-left: 20px;
+    border-bottom: 1px dashed black;
+}
+
+    .q-row-edit .opttion-row input:focus {
+        outline: 0;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+.q-row-edit .opttion-row .remove-button {
+    border: 0;
+    margin-left: 5px;
+}
+
+.q-row-edit .inline-option {
+    padding-left: 10px;
+}
+.matrix {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.columns-title .t-span-25{
+    display: inline-block;
+}
+
+.columns-title .t-span-25 span {
+    display: inline-block;
+    padding-right: 3px;
+    float: left;
+}
+.columns-title div {
+    display: inline-block;
+}
+
+.q-columns div{
+    display: inline-block;
+}
+.q-columns{
+    padding-bottom: 3px;
+}
+@media screen and (max-width: 1000px) {
+    .survey-area {
+        width: 90%;
+    }
+}
+.tab-buttons div{
+    display: inline-block;
+}

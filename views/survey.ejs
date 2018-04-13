@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:52009/Surveys/jEdit/23 -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Inform</title>
+    <link rel="stylesheet" href="./jEdit/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./jEdit/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="./jEdit/menu.css" rel="stylesheet">
+    <link href="./jEdit/w3.css" rel="stylesheet">
+    <link href="./jEdit/content.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./jEdit/modernizr-2.6.2.js.download"></script>
+    <script src="./jEdit/jquery-1.12.4.js.download"></script>
+    <script src="./jEdit/jquery-1.10.2.js.download"></script>
+    <script src="./jEdit/bootstrap.js.download"></script>
+    <script src="./jEdit/respond.js.download"></script>
+    <script src="./jEdit/jquery-ui.js.download"></script>
+    <script src="./jEdit/Chart.js.download"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+    <script src="./jEdit/knockout-3.4.2.js.download"></script>
+    <script src="./jEdit/knockout-sortable.min.js.download"></script>
+    <script src="./jEdit/koExternalTemplateEngine_all.js.download"></script>
+</head>
+<body style="cursor: auto;">
+  <div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/" class="w3-bar-item w3-button w3-wide"><i class="fa fa-home"></i>HOME</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="about" class="w3-bar-item w3-button"> <i class="fa fa-user"></i>ABOUT</a>
+      <a href="" class="w3-bar-item w3-button"><i class="fa fa-comments-o"></i> FORUM</a>
+      <a href="" class="w3-bar-item w3-button"><i class="fa fa-th"></i> NEWS</a>
+      <a href="survey" class="w3-bar-item w3-button"><i class="fa fa-pencil sign"></i> SURVEY</a>
+      <a href="contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    <form action="http://localhost:52009/Account/LogOff" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="Lgz2ZLwvyDTVV8_Dk5RJ4RnHl_ZAfyc0V8_CnxBfZBj-i56dSk42CiSpi5k-LhQwZtjcGgd3z31i0igAbbmBzmEZiajyfJ4oGFNA3gyQmk4sRYIkXIq-7Ez38G1Iaqx-bP6GWjhdwh0SmZRNzEszrw2">    <ul class="nav navbar-nav navbar-right">
+            <a href="user">User@gmail.com!</a>
+            <br>
+            <a href="/">Signout</a>
+    </form>
+    </div> 
+        </div>
+    </div>
+    <div class="container body-content">
+<script type="text/javascript">
+    surveryid = 23;
+</script>
+<link href="./jEdit/w3.css" rel="stylesheet">
+<script src="./jEdit/Global.js.download"></script>
+<script src="./jEdit/tu-menu.js.download"></script>
+<script src="./jEdit/tu-view.js.download"></script>
+<script src="./jEdit/main.js.download"></script>
+<h2>jEdit</h2>
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="right:0" id="survey-menu">
+    <div class="survey-menu-area" data-bind="template: { name: whichTemplateToUse2, data: items2 }"><div data-bind="foreach: menu_btns_list" class="question-block">
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/text.png"></div><span class="btn-name">Single input</span>
+  </div>
+ </div>
+</div>
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/multiple.png"></div><span class="btn-name">Multiple choice</span>
+    </div>
+   </div>
+  </div>
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/checkbox.png"></div><span class="btn-name">Check box</span>
+  </div>
+ </div>
+</div>
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/dropdown.png"></div><span class="btn-name">Drop down</span>
+  </div>
+ </div>
+</div>
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/comment.jpg"></div><span class="btn-name">Comment</span>
+  </div>
+ </div>
+</div>
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/paragraph.png"></div><span class="btn-name">Paragraph</span>
+  </div>
+ </div>
+</div>
+
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/matrix1.png"></div><span class="btn-name">Matrix single choice</span>
+  </div>
+ </div>
+</div>
+
+    <div data-bind="draggable: { data: newTask, isEnabled: allowNewTask, beforeMove: beforemove}" class="ui-draggable ui-draggable-handle">
+    <div class="question-content" data-bind="template: { name: btype, templateUrl: &#39;../../Pages/view/templates/tmp_btns&#39;}"><div class="question-mask">
+    <div class="t-span-5"><img src="./jEdit/matrix2.png"></div><span class="btn-name">Matrix dynamic choice</span>
+    </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+
+<div id="survey-content">
+    <div class="survey-area" data-bind="template: { name: whichTemplateToUse, data: items, as: &#39;sur&#39; }"><form id="form-survey">
+    <div class="survey-header-bar">
+        <div class="survey-title">
+            <span data-bind="text: sname">Full Survey</span>
+        </div>
+        <div class="survey-description">
+            <span data-bind="text: shortdescription">Required Survey</span>
+        </div>
+
+    </div>
+
+    <div class="page-block" data-bind="foreach: pages">
+        <div class="page-area">
+            <div class="page-bar">
+                <div class="page-info">
+                    <div class="page-title">
+                        <span class="t-span-5" data-bind="text:&#39;[&#39;+($index()+1)+&#39;]&#39;">[1]</span>
+                        <input data-bind="value: page_title" placeholder="Enter page title here!">
+                    </div>
+                    <div class="page-description">
+                        <span class="t-span-5"></span>
+                        <input data-bind="value: shortdescription" placeholder="Describe the page here!">
+                    </div>
+                </div>
+                <div class="page-button">
+                    <input class="button remove-button" type="image" src="./jEdit/remove_button.png" width="20" height="20" value="Remove" data-bind="click: $parent.removePage">
+                </div>
+            </div>
+
+            <div data-bind="sortable: {data: questions, as: &#39;question&#39;} " class="question-block ko_container ui-sortable"><div class="ui-sortable-handle">
+                    <div class="question-content" data-bind="template: { name: qtype, templateUrl: &#39;../../Pages/view/templates/tmp_questions&#39;}"><div class="question-mask">
+    <span>Question </span><span data-bind="text: $index()+1">1</span>
+    <div class="q-btns">
+        <input type="checkbox" value="Edit" data-bind="checked: inedit">
+        <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removeQuestion">
+    </div>
+</div>
+<div class="q-title"><h2><span data-bind="text: title">New Matrix</span></h2></div>
+<div class="q-shortdescription"><h4 data-bind="text: shortdescription, visible: useshortdescription" style="display: none;"></h4></div>
+
+
+<div class="matrix">
+    <div class="columns-title">
+        <div class="t-span-25"></div>
+        <div data-bind="foreach: column">
+            <div class="t-span-25">
+                <span data-bind="text: svalue">column1</span>
+            </div>
+        
+            <div class="t-span-25">
+                <span data-bind="text: svalue">column2</span>
+            </div>
+        
+            <div class="t-span-25">
+                <span data-bind="text: svalue">column3</span>
+            </div>
+        </div>
+    </div>
+    <div data-bind="foreach: row" class="q-rows">
+        <div class="q-columns">
+            <div class="t-span-25">
+                <span data-bind="text: svalue">row1</span>
+            </div>
+            <div data-bind="foreach: $parent.column">
+                <div class="t-span-25">
+                    <input type="radio">
+                </div>
+            
+                <div class="t-span-25">
+                    <input type="radio">
+                </div>
+            
+                <div class="t-span-25">
+                    <input type="radio">
+                </div>
+            </div>
+        </div>
+    
+        <div class="q-columns">
+            <div class="t-span-25">
+                <span data-bind="text: svalue">row2</span>
+            </div>
+            <div data-bind="foreach: $parent.column">
+                <div class="t-span-25">
+                    <input type="radio">
+                </div>
+            
+                <div class="t-span-25">
+                    <input type="radio">
+                </div>
+            
+                <div class="t-span-25">
+                    <input type="radio">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="edit" data-bind="visible: inedit" style="display: none;">
+    <div class="q-title-edit edit-block">
+        <b class="edit-label"><span>Question</span></b>
+        <input class="textbox-edit" data-bind="value: title" placeholder="Enter your question here!">
+    </div>
+    <div class="edit-block">
+        <b class="edit-label"><span data-bind="visible: useshortdescription" style="display: none;">Short Description</span></b>
+        <input class="textbox-edit" placeholder="Describe your question here!" data-bind="value: shortdescription, visible : useshortdescription" style="display: none;">
+    </div>
+    <div class="q-required-edit edit-block inline-option">
+        <input type="checkbox" data-bind="checked:isrequired">
+        <b class="edit-label"><span>Required </span></b>
+    </div>
+    <div class="q-description-edit edit-block inline-option">
+        <input type="checkbox" data-bind="checked: useshortdescription">
+        <b class="edit-label"><span>Use Short Description</span></b>
+    </div>
+    <div class="q-row-edit edit-block">
+        <b class="edit-label"><span>Rows </span></b>
+        <div data-bind="foreach: row">
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Row &#39;+$index()">Row 0</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removerow">
+                </div>
+            </div>
+        
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Row &#39;+$index()">Row 1</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removerow">
+                </div>
+            </div>
+        </div>
+        <input class="button add-button" type="image" src="./jEdit/add-button.png" width="20" height="20" data-bind="click:addrow">
+    </div>
+
+    <div class="q-column-edit edit-block">
+        <b class="edit-label"><span>Columns </span></b>
+        <div data-bind="foreach: column">
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Column &#39;+$index()">Column 0</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removecolumn">
+                </div>         
+            </div>
+        
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Column &#39;+$index()">Column 1</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removecolumn">
+                </div>         
+            </div>
+        
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Column &#39;+$index()">Column 2</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removecolumn">
+                </div>         
+            </div>
+        </div>
+        <input class="button add-button" type="image" src="./jEdit/add-button.png" width="20" height="20" data-bind="click:addcolumn">
+    </div>
+</div>
+</div>
+                </div><div class="ui-sortable-handle">
+                    <div class="question-content" data-bind="template: { name: qtype, templateUrl: &#39;../../Pages/view/templates/tmp_questions&#39;}"><div class="question-mask">
+    <span>Question </span><span data-bind="text: $index()+1">2</span>
+    <div class="q-btns">
+        <input type="checkbox" value="Edit" data-bind="checked: inedit">
+        <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removeQuestion">
+    </div>
+</div>
+<div class="q-title"><h2><span data-bind="text: title">New Matrix</span></h2></div>
+<div class="q-shortdescription"><h4 data-bind="text: shortdescription, visible: useshortdescription" style="display: none;"></h4></div>
+<div class="matrix">
+    <div class="columns-title">
+        <div class="t-span-25"></div>
+        <div data-bind="foreach: column">
+            <div class="t-span-25">
+                <span data-bind="text: svalue">column1</span>
+            </div>
+        
+            <div class="t-span-25">
+                <span data-bind="text: svalue">column2</span>
+            </div>
+        
+            <div class="t-span-25">
+                <span data-bind="text: svalue">column3</span>
+            </div>
+        </div>
+    </div>
+    <div data-bind="foreach: row" class="q-rows">
+        <div class="q-columns">
+            <div class="t-span-25">
+                <span data-bind="text: svalue">row1</span>
+            </div>
+            <div data-bind="foreach: $parent.column">
+                <div class="t-span-25">
+
+                    <select data-bind="foreach: question.choices" class="q-choices">
+                        <option data-bind="text: choice_value">Option 1</option>
+                    
+                        <option data-bind="text: choice_value">what the fck</option>
+                    
+                        <option data-bind="text: choice_value">new option</option>
+                    </select>
+                </div>
+            
+                <div class="t-span-25">
+
+                    <select data-bind="foreach: question.choices" class="q-choices">
+                        <option data-bind="text: choice_value">Option 1</option>
+                    
+                        <option data-bind="text: choice_value">what the fck</option>
+                    
+                        <option data-bind="text: choice_value">new option</option>
+                    </select>
+                </div>
+            
+                <div class="t-span-25">
+
+                    <select data-bind="foreach: question.choices" class="q-choices">
+                        <option data-bind="text: choice_value">Option 1</option>
+                    
+                        <option data-bind="text: choice_value">what the fck</option>
+                    
+                        <option data-bind="text: choice_value">new option</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+        <div class="q-columns">
+            <div class="t-span-25">
+                <span data-bind="text: svalue">row2</span>
+            </div>
+            <div data-bind="foreach: $parent.column">
+                <div class="t-span-25">
+
+                    <select data-bind="foreach: question.choices" class="q-choices">
+                        <option data-bind="text: choice_value">Option 1</option>
+                    
+                        <option data-bind="text: choice_value">what the fck</option>
+                    
+                        <option data-bind="text: choice_value">new option</option>
+                    </select>
+                </div>
+            
+                <div class="t-span-25">
+
+                    <select data-bind="foreach: question.choices" class="q-choices">
+                        <option data-bind="text: choice_value">Option 1</option>
+                    
+                        <option data-bind="text: choice_value">what the fck</option>
+                    
+                        <option data-bind="text: choice_value">new option</option>
+                    </select>
+                </div>
+            
+                <div class="t-span-25">
+
+                    <select data-bind="foreach: question.choices" class="q-choices">
+                        <option data-bind="text: choice_value">Option 1</option>
+                    
+                        <option data-bind="text: choice_value">what the fck</option>
+                    
+                        <option data-bind="text: choice_value">new option</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="edit" data-bind="visible: inedit" style="display: none;">
+    <div class="q-title-edit edit-block">
+        <b class="edit-label"><span>Question</span></b>
+        <input class="textbox-edit" data-bind="value: title" placeholder="Enter your question here!">
+    </div>
+    <div class="edit-block">
+        <b class="edit-label"><span data-bind="visible: useshortdescription" style="display: none;">Short Description</span></b>
+        <input class="textbox-edit" placeholder="Describe your question here!" data-bind="value: shortdescription, visible : useshortdescription" style="display: none;">
+    </div>
+    <div class="q-required-edit edit-block inline-option">
+        <input type="checkbox" data-bind="checked:isrequired">
+        <b class="edit-label"><span>Required </span></b>
+    </div>
+    <div class="q-description-edit edit-block inline-option">
+        <input type="checkbox" data-bind="checked: useshortdescription">
+        <b class="edit-label"><span>Use Short Description</span></b>
+    </div>
+    <div class="q-options-edit edit-block" data-bind="template: { name: &#39;optionsedit&#39;, templateUrl: &#39;../../Pages/view/templates/tmp_questions/edit&#39;}"><b class="edit-label"><span>Options</span></b>
+<div style="margin-bottom: 3px;" data-bind="foreach: choices" class="q-choices-edit">
+    <div class="option">
+        <div>
+            <span class="edit-label">Option </span>
+            <input class="textbox-edit" data-bind="value: choice_value">
+        </div>
+        <div class="inline-option" style="height:23px; background-color:transparent">
+            <input class="button remove-button" style="float:right;" type="image" src="./jEdit
+            /remove-2-button.png" width="20" height="20" data-bind="click: $parent.removechoice">
+        </div>
+        <div class="inline-option" data-bind="visible:$parent.isscored" style="display: none;">
+            <span data-bind="visible:$parent.isscored" style="display: none;">Score</span>
+            <input class="number-edit" type="number" data-bind="value: score, event:{blur: autofixscore()}, visible:$parent.isscored" style="display: none;">
+        </div>
+        <div class="inline-option" data-bind="visible:$parent.nextpagedetect" style="display: none;">
+            <span data-bind="visible:$parent.nextpagedetect" style="display: none;">Next page</span>
+            <select class="number-edit" data-bind="foreach: {data: sur.pagenumbers, as: &#39;num&#39;}, value: nextpage, visible:$parent.nextpagedetect" style="display: none;">
+                <option data-bind="value: num, text: &#39;Page &#39;+(num +1)" value="0">Page 1</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="option">
+        <div>
+            <span class="edit-label">Option </span>
+            <input class="textbox-edit" data-bind="value: choice_value">
+        </div>
+        <div class="inline-option" style="height:23px; background-color:transparent">
+            <input class="button remove-button" style="float:right;" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removechoice">
+        </div>
+        <div class="inline-option" data-bind="visible:$parent.isscored" style="display: none;">
+            <span data-bind="visible:$parent.isscored" style="display: none;">Score</span>
+            <input class="number-edit" type="number" data-bind="value: score, event:{blur: autofixscore()}, visible:$parent.isscored" style="display: none;">
+        </div>
+        <div class="inline-option" data-bind="visible:$parent.nextpagedetect" style="display: none;">
+            <span data-bind="visible:$parent.nextpagedetect" style="display: none;">Next page</span>
+            <select class="number-edit" data-bind="foreach: {data: sur.pagenumbers, as: &#39;num&#39;}, value: nextpage, visible:$parent.nextpagedetect" style="display: none;">
+                <option data-bind="value: num, text: &#39;Page &#39;+(num +1)" value="0">Page 1</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="option">
+        <div>
+            <span class="edit-label">Option </span>
+            <input class="textbox-edit" data-bind="value: choice_value">
+        </div>
+        <div class="inline-option" style="height:23px; background-color:transparent">
+            <input class="button remove-button" style="float:right;" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removechoice">
+        </div>
+        <div class="inline-option" data-bind="visible:$parent.isscored" style="display: none;">
+            <span data-bind="visible:$parent.isscored" style="display: none;">Score</span>
+            <input class="number-edit" type="number" data-bind="value: score, event:{blur: autofixscore()}, visible:$parent.isscored" style="display: none;">
+        </div>
+        <div class="inline-option" data-bind="visible:$parent.nextpagedetect" style="display: none;">
+            <span data-bind="visible:$parent.nextpagedetect" style="display: none;">Next page</span>
+            <select class="number-edit" data-bind="foreach: {data: sur.pagenumbers, as: &#39;num&#39;}, value: nextpage, visible:$parent.nextpagedetect" style="display: none;">
+                <option data-bind="value: num, text: &#39;Page &#39;+(num +1)" value="0">Page 1</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div>
+    <input class="button add-button" type="image" src="./jEdit/add-button.png" width="20" height="20" data-bind="click:addchoice">
+</div></div>
+
+    <div class="q-row-edit edit-block">
+        <b class="edit-label"><span>Rows </span></b>
+        <div data-bind="foreach: row">
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Row &#39;+$index()">Row 0</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removerow">
+                </div>
+            </div>
+        
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Row &#39;+$index()">Row 1</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removerow">
+                </div>
+            </div>
+        </div>
+        <input class="button add-button" type="image" src="./jEdit/add-button.png" width="20" height="20" data-bind="click:addrow">
+    </div>
+    <div class="q-column-edit edit-block">
+        <b class="edit-label"><span>Columns </span></b>
+        <div data-bind="foreach: column">
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Column &#39;+$index()">Column 0</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removecolumn">
+                </div>
+            </div>
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Column &#39;+$index()">Column 1</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removecolumn">
+                </div>
+            </div>
+            <div class="inline-option full">
+                <span data-bind="text: &#39;Column &#39;+$index()">Column 2</span>
+                <div class="opttion-row">
+                    <input type="text" data-bind="value: svalue">
+                    <input class="button remove-button" type="image" src="./jEdit/remove-2-button.png" width="20" height="20" data-bind="click: $parent.removecolumn">
+                </div>
+            </div>
+        </div>
+        <input class="button add-button" type="image" src="./jEdit/add-button.png" width="20" height="20" data-bind="click:addcolumn">
+    </div>
+</div>
+</div>
+                </div></div>
+        </div>
+    </div>
+    <div class="tab-button">
+        <input class="w3-btn w3-black" type="button" value="Add page" data-bind="click: addPage">
+    </div>
+    <div class="tab-button">
+        <input class="w3-btn w3-black" type="button" onclick="updateSurveyData()" value="Save">
+    </div>
+    <div class="tab-button">
+        <input class="w3-btn w3-black" type="button" onclick="gotopreview()" value="Test Survey">
+    </div>
+    <div class="tab-button">
+        <input class="w3-btn w3-black" type="button" onclick="gotoshare()" value="Share">
+    </div>
+</form></div>
+</div>
+        <hr>
+        <footer>
+            <p>2018 - Do not stay behind</p>
+        </footer>
+    </div>
+</body></html>
+<% if(isLocal){%>
+    <script src="reload/reload.js"></script>
+<%}%>
